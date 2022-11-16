@@ -3,7 +3,7 @@ using System.Diagnostics;
 using Microsoft.Win32;
 public class Reactivator
 {
-    public static void Main()
+    private static void Main()
     {
         Console.WriteLine("Do you want to get the old 'Create Textfile' back? Y/N");
         if (Console.ReadLine().ToLower() == "y")
@@ -16,7 +16,7 @@ public class Reactivator
         }
     }
 
-    public static void DoWork()
+    private static void DoWork()
     {
         RegistryKey key;
         key = Registry.ClassesRoot.CreateSubKey(".txt").CreateSubKey("ShellNew");
